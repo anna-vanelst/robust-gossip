@@ -26,7 +26,7 @@ To run an experiment called "exp", you can simply use the following
 python run_experiments.py --exp_name "exp"
 ```
 
-To generate a figure called "plot" from the paper, you can use following
+To generate a figure called "plot" from the paper, you can use the following
 ```bash
 python run_figures.py --plot_name "plot"
 ```
