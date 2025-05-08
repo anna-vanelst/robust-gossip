@@ -1,0 +1,18 @@
+experiment:
+  seed: 42
+  n_trials: 1000
+  horizon: 80000
+task: averaging
+path:
+  folder: exp10a
+  output: results.pkl
+data:
+  type: arange
+  n: 500
+  shuffle: noshuffle
+  eps: 0.1
+  outlier: 10
+graph: 2D Grid
+ranking: GoRank
+trimming:
+  alpha: 0.2

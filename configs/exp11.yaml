@@ -1,0 +1,19 @@
+experiment:
+  seed: 42
+  n_trials: 100
+  horizon: 80000
+task: averaging
+path:
+  folder: exp11
+  output: results.pkl
+data:
+  type: arange
+  n: 500
+  eps: 0.1
+  outlier: 10
+graph: Complete
+ranking: All
+trimming:
+  alpha: 0.2
+clipping:
+  tau: 50
