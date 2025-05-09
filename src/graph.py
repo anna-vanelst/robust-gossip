@@ -9,10 +9,6 @@ def generate_graph(n, type="Watts-Strogatz", seed=42):
         k = 4  # Average degree for Watts-Strogatz
         p = 0.4  # Rewiring probability
         G = nx.watts_strogatz_graph(n, k, p, seed=seed)
-    elif type == "Watts-Strogatz-d6":
-        k = 6  # Average degree for Watts-Strogatz
-        p = 0.8  # Rewiring probability
-        G = nx.watts_strogatz_graph(n, k, p, seed=seed)
     elif type == "2D Grid":
         length, width = best_side_from_surface(n)
         G = nx.grid_2d_graph(length, width)

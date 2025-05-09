@@ -88,11 +88,6 @@ def main():
         estimates = [
             class_estimate(horizon, n, data) for class_estimate in class_estimates
         ]
-    # elif task == "averaging":
-    #     estimates = [
-    #         MeanEstimate(horizon, n, data, alpha, rank_class)
-    #         for rank_class in class_estimates
-    #     ]
     elif task == "averaging":
         class_estimates = [GoRankEstimate, ImprovedBaselineEstimate]
         estimates = [
