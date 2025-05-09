@@ -4,6 +4,7 @@ from plot.plot_rank_c import main as plot_rank_c
 from plot.plot_trim import main as plot_trim
 from plot.plot_trim_a import main as plot_trim_a
 import argparse
+import os
 
 
 def main():
@@ -11,6 +12,8 @@ def main():
     parser.add_argument("--plot_name", type=str, required=True, help="Name of plot")
     args = parser.parse_args()
     plot_name = args.plot_name
+    path = os.path.join("results", "figures")
+    os.makedirs(path, exist_ok=True)
 
     if plot_name == "rank_a":
         plot_rank_a("exp2", save_path="plot_rank_a.pdf")  # watts-strogatz
