@@ -2,7 +2,12 @@ import random
 import numpy as np
 from src.graph import generate_graph
 from scipy.stats import trim_mean
-from src.rank import GoRankEstimate, ImprovedBaselineEstimate, BaselineEstimate
+from src.rank import (
+    GoRankEstimate,
+    ImprovedBaselineEstimate,
+    BaselineEstimate,
+    GoRankEstimateAsync,
+)
 from src.trim import MeanEstimate, ClippedGossip
 import os
 import pickle
@@ -70,6 +75,12 @@ def main():
         class_estimates = [GoRankEstimate]
     elif config.ranking == "All":
         class_estimates = [GoRankEstimate, ImprovedBaselineEstimate, BaselineEstimate]
+    elif config.ranking == "Async":
+        class_estimates = [
+            ImprovedBaselineEstimate,
+            GoRankEstimate,
+            GoRankEstimateAsync,
+        ]
     ### END CONDIG ###
 
     ### INIT ###

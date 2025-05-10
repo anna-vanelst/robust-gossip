@@ -41,6 +41,34 @@ class GoRankEstimate(RankEstimate):
         self.y_data[[i, j]] = self.y_data[[j, i]]
 
 
+class GoRankEstimateAsync(RankEstimate):
+    """
+    This class implements the GoRank algorithm
+    """
+
+    def __init__(self, horizon, n, data):
+        super().__init__(horizon, n, data)
+        self.y_data = data.copy()
+        self.weight = 1
+        self.color = "C1"
+        self.name = "GoRank Async (ours)"
+        self.marker = "C1o-"
+        self.count = np.zeros(n)
+
+    def update(self, t, i, j):
+        # Update auxiliary rank estimates
+        self.historical_ranking[t] = self.historical_ranking[t - 1].copy()
+        self.count[i] += 1
+        self.count[j] += 1
+        for node in [i, j]:
+            self.historical_ranking[t][node] = (
+                (self.count[node] - 1) * self.historical_ranking[t - 1][node]
+                + (self.data[node] > self.y_data[node])
+            ) / self.count[node]
+        # Swap auxiliary observations
+        self.y_data[[i, j]] = self.y_data[[j, i]]
+
+
 class ImprovedBaselineEstimate(RankEstimate):
     """
     This class implements the Baseline++ algorithm
