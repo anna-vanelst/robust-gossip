@@ -64,6 +64,15 @@ def main():
             plot_trim(exp_name, save_path)
     elif plot_name == "trim_c":
         plot_trim("exp14", save_path="plot_trim_c.pdf")
+    elif plot_name == "rank_d_appendix":
+        exp_names = ["exp15", "exp16", "exp17"]
+        save_paths = [
+            "plot_rank_d_complete.pdf",
+            "plot_rank_d_grid.pdf",
+            "plot_rank_d_ws.pdf",
+        ]
+        for exp_name, save_path in zip(exp_names, save_paths):
+            plot_rank_c(exp_name, save_path)
 
 
 if __name__ == "__main__":

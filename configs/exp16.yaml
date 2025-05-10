@@ -1,0 +1,12 @@
+experiment:
+  seed: 42
+  n_trials: 100
+  horizon: 80000
+path:
+  folder: exp16
+  output: results.pkl
+data:
+  type: arange
+  n: 500
+graph: Complete
+ranking: Async
