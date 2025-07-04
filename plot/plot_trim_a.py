@@ -36,12 +36,12 @@ def main(exp_name, save_path="plot_trim_a.pdf"):
     def constant_bound(r, n, alpha):
         """Theoretical shape of the error"""
         x = r / n
-        sigma = np.sqrt(np.sqrt(x * (1 - x)))
+        sigma = np.sqrt(x * (1 - x))
         m = int(alpha * n)
         a = m + 0.5
         b = n - m + 0.5
         gamma = np.array([min(abs(rk + 1 - a), abs(rk + 1 - b)) for rk in r])
-        return sigma / gamma
+        return sigma**2 / gamma**2
 
     theo_shape = constant_bound(true_ranks, n, alpha)
     name = names[0]
