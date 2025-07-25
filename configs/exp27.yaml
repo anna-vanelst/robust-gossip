@@ -1,0 +1,20 @@
+experiment:
+  seed: 42
+  n_trials: 100
+  horizon: 100000
+task: averaging
+path:
+  folder: exp27
+  output: results.pkl
+data:
+  type: arange
+  n: 2000
+  treshold: 0
+  eps: 0.1
+  outlier: 100
+graph: Watts-Strogatz
+ranking: All
+trimming:
+  alpha: 0.2
+clipping:
+  tau: 50
