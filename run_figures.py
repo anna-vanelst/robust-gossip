@@ -82,6 +82,15 @@ def main():
         ]
         for name, path in zip(exp_name, save_path):
             plot_rank_c(name, save_path=path)
+    elif plot_name == "xl_rank_c":
+        exp_name = ["exp21", "exp22", "exp23"]
+        save_path = [
+            "plot_xl_rank_c_ws.pdf",
+            "plot_xl_rank_c_grid.pdf",
+            "plot_xl_rank_c_complete.pdf",
+        ]
+        for name, path in zip(exp_name, save_path):
+            plot_rank_c(name, save_path=path)
 
 
 if __name__ == "__main__":
