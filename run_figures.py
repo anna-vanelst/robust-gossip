@@ -91,6 +91,22 @@ def main():
         ]
         for name, path in zip(exp_name, save_path):
             plot_rank_c(name, save_path=path)
+    elif plot_name == "large_trim_c":
+        exp_name = ["exp24", "exp25"]
+        save_path = [
+            "plot_large_trim_c_ws.pdf",
+            "plot_large_trim_c_grid.pdf",
+        ]
+        for name, path in zip(exp_name, save_path):
+            plot_trim(name, save_path=path)
+    elif plot_name == "xl_trim_c":
+        exp_name = ["exp26", "exp27"]
+        save_path = [
+            "plot_xl_trim_c_ws.pdf",
+            "plot_xl_trim_c_grid.pdf",
+        ]
+        for name, path in zip(exp_name, save_path):
+            plot_trim(name, save_path=path)
 
 
 if __name__ == "__main__":
