@@ -3,12 +3,10 @@ experiment:
   n_trials: 10
   horizon: 80000
 path:
-  folder: exp4
+  folder: exp30
   output: results.pkl
 data:
   type: arange
   n: 500
-graph: 2D Grid
+graph: Clustered
 ranking: GoRank
-
-
