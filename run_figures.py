@@ -107,6 +107,10 @@ def main():
         ]
         for name, path in zip(exp_name, save_path):
             plot_trim(name, save_path=path)
+    elif plot_name == "xxl_rank_c":
+        exp_name = "exp28"
+        plot_name = "plot_xxl_rank_c.pdf"
+        plot_rank_c(exp_name, save_path=plot_name)
 
 
 if __name__ == "__main__":

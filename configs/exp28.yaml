@@ -1,0 +1,12 @@
+experiment:
+  seed: 42
+  n_trials: 100
+  horizon: 150000
+path:
+  folder: exp28
+  output: results.pkl
+data:
+  type: arange
+  n: 5000
+graph: 2D Grid
+ranking: All
