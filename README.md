@@ -44,7 +44,7 @@ The experiments are run on a single CPU with 32 GB of memory. The execution time
 | exp11+exp12+exp13    | ~ 15 min     | Trim (b) 
 | exp14    | ~ 5 min     | Trim (c)
 | exp15+exp16+exp17    | ~ 5 min     | Rank (d)
-
+| exp18+exp19+exp20    | ~ ?? min     | Large Rank
 
 
 ## Basel Luftklima Dataset
