@@ -18,9 +18,14 @@ def generate_graph(n, type="Watts-Strogatz", seed=42):
         G = nx.cycle_graph(n)
     elif type == "Clustered":
         G = clustered_graph(n)
+    elif type == "Tree":
+        G = nx.random_tree(n, seed=seed)
+    elif type == "Expander":
+        G = nx.random_regular_graph(3, n, seed=seed)
     else:
         raise ValueError("Wrong graph type.")
-
+    # print number of edges
+    print(f"Number of edges in {type} graph: {G.number_of_edges()}")
     # check if graph is connected
     if not nx.is_connected(G):
         print("Graph is not connected. Generating a new graph.")

@@ -27,7 +27,8 @@ def main():
         for exp_name, save_path in zip(exp_names, save_paths):
             plot_rank_a(exp_name, save_path)
     elif plot_name == "rank_b":
-        exp_names = ["exp30", "exp5", "exp4"]
+        exp_names = ["exp6", "exp5", "exp4"]
+        # exp_names = ["exp33", "exp31", "exp32"]
         plot_rank_b(exp_names, save_path="plot_rank_b.pdf")
     elif plot_name == "rank_c":
         plot_rank_c("exp8", save_path="plot_rank_c.pdf")  # watts-strogatz
@@ -115,6 +116,14 @@ def main():
         exp_name = "exp29"
         plot_name = "plot_clustered.pdf"
         plot_rank_c(exp_name, save_path=plot_name)
+    elif plot_name == "sparse_rank":
+        exp_names = ["exp33", "exp31", "exp32"]
+        save_path = "plot_sparse_rank.pdf"
+        plot_rank_b(exp_names, save_path=save_path)
+    elif plot_name == "sparse_trim":
+        exp_names = "exp36"
+        save_path = "plot_sparse_trim.pdf"
+        plot_trim(exp_names, save_path=save_path)
 
 
 if __name__ == "__main__":
