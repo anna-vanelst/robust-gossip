@@ -112,17 +112,29 @@ def main():
         exp_name = "exp28"
         plot_name = "plot_xxl_rank_c.pdf"
         plot_rank_c(exp_name, save_path=plot_name)
+    elif plot_name == "xxl_trim_c":
+        exp_name = "exp28b"
+        plot_name = "plot_xxl_trim_c.pdf"
+        plot_trim(exp_name, save_path=plot_name)
     elif plot_name == "clustered":
         exp_name = "exp29"
         plot_name = "plot_clustered.pdf"
         plot_rank_c(exp_name, save_path=plot_name)
+    elif plot_name == "trim_clustered":
+        exp_name = "exp35"
+        plot_name = "plot_trim_clustered.pdf"
+        plot_trim(exp_name, save_path=plot_name)
     elif plot_name == "sparse_rank":
         exp_names = ["exp33", "exp31", "exp32"]
         save_path = "plot_sparse_rank.pdf"
         plot_rank_b(exp_names, save_path=save_path)
-    elif plot_name == "sparse_trim":
+    elif plot_name == "sparse_trim_expander":
+        exp_names = "exp34"
+        save_path = "plot_sparse_trim_expander.pdf"
+        plot_trim(exp_names, save_path=save_path)
+    elif plot_name == "sparse_trim_cycle":
         exp_names = "exp36"
-        save_path = "plot_sparse_trim.pdf"
+        save_path = "plot_sparse_trim_cycle.pdf"
         plot_trim(exp_names, save_path=save_path)
 
 

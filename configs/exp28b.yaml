@@ -4,15 +4,16 @@ experiment:
   horizon: 150000
 task: averaging
 path:
-  folder: exp36
+  folder: exp28b
   output: results.pkl
 data:
   type: arange
-  n: 500
+  n: 5000
+  treshold: 0
   eps: 0.1
-  outlier: 10
-graph: Cycle
-ranking: GoRank
+  outlier: 100
+graph: 2D Grid
+ranking: All
 trimming:
   alpha: 0.2
 clipping:

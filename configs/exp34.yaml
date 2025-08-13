@@ -1,6 +1,6 @@
 experiment:
   seed: 42
-  n_trials: 1
+  n_trials: 100
   horizon: 150000
 task: averaging
 path:
