@@ -1,6 +1,20 @@
 # Robust Distributed Estimation: Extending Gossip Algorithms to Ranking and Trimmed Means
 
 This repository contains the official implementation of the experiments and figures in our paper, designed to make our research reproducible. 
+You can find the preprint [here](https://arxiv.org/pdf/2505.17836).
+
+## Citation
+
+If you find this work useful, please consider citing our paper:
+
+```bibtex
+@article{van2025robust,
+  title={Robust Distributed Estimation: Extending Gossip Algorithms to Ranking and Trimmed Means},
+  author={Van Elst, Anna and Colin, Igor and Cl{\'e}men{\c{c}}on, Stephan},
+  journal={To appear in the Proceedings of Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2025}
+}
+```
 
 ## Repository Structure
 
@@ -44,8 +58,8 @@ The experiments are run on a single CPU with 32 GB of memory. The execution time
 | exp11+exp12+exp13    | ~ 15 min     | Trim (b) 
 | exp14    | ~ 5 min     | Trim (c)
 | exp15+exp16+exp17    | ~ 5 min     | Rank (d)
-| exp18+exp19+exp20    | ~ ?? min     | Large Rank
 
+The experiments "exp18" to "exp36" corresponds to the plots available in the appendix. Large scale experiments (for n=1000 or n=5000) are run on a single A100 GPU with 50 GB of memory.
 
 ## Basel Luftklima Dataset
 
